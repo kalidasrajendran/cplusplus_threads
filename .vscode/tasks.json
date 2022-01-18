@@ -24,6 +24,18 @@
 				"isDefault": true
 			},
 			"detail": "compiler: C:\\softwares\\msys64\\mingw64\\bin\\g++.exe"
+		},
+		{
+			"type": "shell",
+			"label": "Build and Run C++ g++.exe",
+			"command": "C:\\softwares\\msys64\\mingw64\\bin\\g++.exe -g3 -Wall \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" &&\"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "compiler: C:\\softwares\\msys64\\mingw64\\bin\\g++.exe"
 		}
 	]
 }
