@@ -3,8 +3,11 @@
 using namespace std;
 
 int main()
-{
-    cout << "Welcome kalidas" << endl;
+{   
+    for (int i = 0; i < 10; i++)
+    {
+        cout << "Welcome kalidas" << endl;
+    }
 }
 
 
