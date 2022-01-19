@@ -36,6 +36,29 @@
 				"$gcc"
 			],
 			"detail": "compiler: C:\\softwares\\msys64\\mingw64\\bin\\g++.exe"
-		}
+		},
+		{
+			"type": "cppbuild",
+			"label": "Build Box Volume Multiple Files",
+			"command": "C:\\softwares\\msys64\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-g3",
+				"-Wall",
+				"${workspaceFolder}\\BoxVolume\\/**.cpp",
+				"-o",
+				"${workspaceFolder}\\BoxVolume\\BoxVolume.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\softwares\\msys64\\mingw64\\bin\\g++.exe"
+		}	
 	]
 }
