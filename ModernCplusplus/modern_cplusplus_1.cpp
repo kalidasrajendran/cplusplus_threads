@@ -27,8 +27,10 @@ int main()
     cout << endl;
 
     cout << "hello = " << hello << endl;
-
-
-
-
 }
+/* result */
+//  X = 7
+//  S = Let us begin modern c++
+//  Y = 7
+//  v = 1 2 3 4 5 6 7
+//  hello = hello

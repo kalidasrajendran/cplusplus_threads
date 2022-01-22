@@ -24,3 +24,7 @@ int main()
     std::cout << " seconds.\n";
 
 }
+
+/* result */
+// duration (in periods): 60000 milliseconds.
+// duration (in seconds): 60 seconds.

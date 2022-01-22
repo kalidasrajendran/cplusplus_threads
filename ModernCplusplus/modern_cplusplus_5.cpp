@@ -41,11 +41,12 @@ int main()
         });
     cout << "divisible by 3 count: " << by_three << endl;
 
-
-
-
-
-
-
     return 0;
 }
+
+/* result */
+//  Elements of vector
+//  1 2 3 4 5 6 7 8
+//  even count: 4
+//  lambda even count: 4
+//  divisible by 3 count: 2
