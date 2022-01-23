@@ -1,8 +1,10 @@
 #include <iostream>
 #include <thread>
 #include <string>
+#include <chrono> 
 
 using namespace std;
+using namespace std::literals;
 
 void func()
 {
@@ -66,6 +68,10 @@ int main()
     string s7{"john"};
     cout << "lambda function old name: " << s7 << endl;
     thread t7{ [&s7]() { s7 = "mike";} };
+
+    // std::this_thread::sleep_for(50ms);
+    std::this_thread::sleep_for(5s);
+
     t7.join();
     cout << "lambda function new name: " << s7 << endl;
 
