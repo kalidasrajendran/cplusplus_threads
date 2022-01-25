@@ -6,6 +6,7 @@
         "type_traits": "cpp",
         "thread": "cpp",
         "ostream": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "mutex": "cpp"
     }
 }
