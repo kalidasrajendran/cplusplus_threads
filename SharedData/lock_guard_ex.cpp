@@ -33,20 +33,21 @@ void print(string str)
 
 void print1(string str)
 {
-    try
-    {
-        /* code */
-        lock_guard<mutex> lg(print_mutex);
-        for (int i = 0; i < 5; i++)
-        {        
-            cout << str[0] << str[1] << str[2] << endl;  
-            this_thread::sleep_for(100ms);
-            throw std::exception();      
+    for (int i = 0; i < 5; i++)
+    { 
+        try
+        {
+            /* code */
+            lock_guard<mutex> lg(print_mutex);
+                   
+            cout << str[0] << str[1] << str[2] << endl;              
+            throw std::exception(); 
+            std::this_thread::sleep_for(50ms);               
         }
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << "exception caught" << '\n';
+        catch(const std::exception& e)
+        {
+            //std::cerr << e.what() << "exception caught" << '\n';
+        }
     }
     
 }
