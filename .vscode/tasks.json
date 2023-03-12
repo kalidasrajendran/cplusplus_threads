@@ -46,7 +46,7 @@
 				"-Wall",
 				"${workspaceFolder}\\BoxVolume\\/**.cpp",
 				"-o",
-				"${workspaceFolder}\\BoxVolume\\BoxVolume.exe"
+				"${workspaceFolder}\\BoxVolume\\Box_Volume.exe"
 			],
 			"options": {
 				"cwd": "${fileDirname}"

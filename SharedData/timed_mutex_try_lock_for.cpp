@@ -33,6 +33,21 @@ void task2()
     the_mutex.unlock();
 }
 
+void task3()
+{
+    this_thread::sleep_for(100ms);
+    cout << "Task3 trying to get lock" << endl;
+    auto deadline = std::chrono::steady_clock::now() + 90ms;
+
+    while(!the_mutex.try_lock_until(deadline))
+    {
+        cout << "Task3 couldn't get lock" << endl;
+        this_thread::sleep_for(100ms);
+    }
+    cout << "Task3 has lock" << endl;
+    the_mutex.unlock();
+}
+
 int main()
 {
     thread t1 { task1 };
@@ -40,6 +55,12 @@ int main()
     
     t1.join();
     t2.join();
+
+    thread t3 { task1 };
+    thread t4 { task2 };
+    
+    t3.join();
+    t4.join();
     
 }
 
